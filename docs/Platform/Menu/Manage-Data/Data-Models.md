@@ -34,22 +34,13 @@ The interaction table specifies info about the interaction (a user interacting w
 
 
 <h4> Field</h4>
-<details class="optional-class"><summary>Show more information</summary>
-
+  
 This is the name of the given in the source query (it can not be changed in the data model).  
-
-</details>
-
 <h4> Alias</h4>
-<details class="optional-class"><summary>Show more information</summary>
 
 By adding an alias the the field name is replaced by the alias name in the dashboard and segmentation. In Recommendation the field name is always shown even if an alias is added.
-</details>
-
 
 <h4> Role </h4>
-<details class="optional-class"><summary>Show more information</summary>
-
 <table>
 <thead>
 <tr>
@@ -101,27 +92,69 @@ By adding an alias the the field name is replaced by the alias name in the dashb
 </tbody>
 </table>
 
-
-</details>
-
 <h4> Active </h4>
-
-<details class="optional-class"><summary>Show more information</summary>
 
 The Active toggle button lets you activate/deactivate a field. a deactivated field can not be used in dashboards.
 
-</details>
-
-
-
 <h4> Info </h4>
-
-
-<details class="optional-class"><summary>Show more information</summary>
 
 Click on the small `i` button to see a preview of how the data looks/is formatted.
 
-</details>
+<h4> Added fields </h4>
+<table>
+<thead>
+<tr>
+  <th>Expression</th>
+  <th>Alias</th>
+  <th>Kind</th>
+  <th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>agg.daysFromFirst</td>
+  <td>Days from first order</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.daysFromPrev</td>
+  <td>Days from previous order</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.daysToNext</td>
+  <td>Days to next order</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.i</td>
+  <td>agg.i</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.i + 1</td>
+  <td>Order sequence</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.orderI</td>
+  <td>agg.orderI</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+<tr>
+  <td>agg.orderRevenue</td>
+  <td>Order revenue</td>
+  <td>Number</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
 
 </details>
 
@@ -135,17 +168,12 @@ The item table specifies info about the items, i.e. the products.
 <img width="976" alt="Screenshot 2022-07-01 at 11 58 21" src="https://user-images.githubusercontent.com/4352260/176872773-89453cc1-56eb-4175-88c1-e5aa6de16019.png">
 
 <h4>  Fields</h4>
-<details class="optional-class"><summary>Show more information</summary>
 This is the name of the given in the source query (it can not be changed in the data model).  
-</details>
 
 <h4> Alias</h4>
-<details class="optional-class"><summary>Show more information</summary>
 By adding an alias the the field name is replaced by the alias name in the dashboard and segmentation. In Recommendation the field name is always shown even if an alias is added.
-</details>
-
+  
 <h4> Role</h4>
-<details class="optional-class"><summary>Show more information</summary>
 
 <table>
 <thead>
@@ -190,38 +218,24 @@ By adding an alias the the field name is replaced by the alias name in the dashb
 </tbody>
 </table>
 
-
-</details>
-
 <h4>  MLMeta</h4>
-<details class="optional-class"><summary>Show more information</summary>
 The MLMeta toggle button controls what is returned when when you make an API call. This is to give you control what data you want to return to the customer. You don't want to activate MLMeta on all fields because this will result in returning a lot of "trash columns" to the customer that they have to filter in turn get the relevant data. Note that you also have to select the role `Image` and `Format` for the product to show. MLMeta is only relevant in the recommendations view.
-</details>
 
 <h4>  MLFilter</h4>
-<details class="optional-class"><summary>Show more information</summary>
 The MLFilter lets you write expressions and filter your data in in the recommendations. You should only activate MLFilter for the fields you actually want to create a filter for, the reason for this is that when you activate **MLFilter** for a field this will store all data in the memory and every time the API calls for a recommendation the data model have to iterate through all fields with **MLFilter** resulting in a bad performance on the customers side (when the customer want to load our recommendations on their site the load speed will depend on how many **MLFilters** you have activated.  
 
 <img width="892" alt="Screenshot 2022-06-10 at 08 16 47" src="https://user-images.githubusercontent.com/4352260/173002754-8885b8fa-1b5c-4dad-a74d-732f1d409eda.png">
-</details>
 
 <h4> Active </h4>
-
-<details class="optional-class"><summary>Show more information</summary>
 The Active toggle button lets you activate/deactivate a field. a deactivated field can not be used in dashboards.
-</details>
-
 
 <h4>  Info</h4>
-<details class="optional-class"><summary>Show more information</summary>
 Click on the small `i` button to see a preview of how the data looks/is formatted.
-</details>
-
 
 </details>
 
 
-## User config
+## User Configuration
 <details class="optional-class"><summary>Show more information</summary>
 The user table specifies info about the users, i.e. the customers. 
 
@@ -229,17 +243,12 @@ The user table specifies info about the users, i.e. the customers.
 
 
 <h4> Field</h4>
-<details class="optional-class"><summary>Show more information</summary>
 This is the name of the given in the source query (it can not be changed in the data model).  
-</details>
 
 <h4> Alias </h4>
-<details class="optional-class"><summary>Show more information</summary>
 By adding an alias the the field name is replaced by the alias name in the dashboard and segmentation. In Recommendation the field name is always shown even if an alias is added.
-</details>
 
 <h4> Role</h4>
-<details class="optional-class"><summary>Show more information</summary>
 
 <table>
 <thead>
@@ -282,23 +291,13 @@ By adding an alias the the field name is replaced by the alias name in the dashb
 </tr>
 </tbody>
 </table>
-<p></details></p>
-
-
 
 <h4> Persona</h4>
-<details class="optional-class"><summary>Show more information</summary>
-
 The Persona toggle button controls what columns are used in the recommendations. For example, if we activate the field `gender` as a Persona, the recommendation engine will base the recommendations on what gender the user has. If we active the field `age` it will be used as a dimension in the recommendation, and so on.
 
 <b>Note:</b> Use a maximum of 2 columns to define persona. Alternatively, make sure that the cardinality (number of groups) is less than 1000. (ex gender: 2 different and cities: 500 different, which means `2*500 = 1000` groups)
 
 <img width="883" alt="Screenshot 2022-06-10 at 08 16 38" src="https://user-images.githubusercontent.com/4352260/173002716-64dd3abf-fc87-4b0d-942b-19b46b6e98b7.png">
-
-
-</details>
-
-
 
 </details>
 
